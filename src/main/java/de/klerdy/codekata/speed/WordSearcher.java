@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * This interface searches for words within a {@link Collection}.
  *
- * @author norman.nusse
+ * @author Norman Nusse
  */
 public interface WordSearcher {
 

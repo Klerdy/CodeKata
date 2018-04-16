@@ -5,6 +5,8 @@ import java.time.Duration;
 /**
  * This enum specifies the possible time units that the {@link StopWatch} supports.
  * It converts the runtime duration for each unit.
+ *
+ * @author Norman Nusse
  */
  public enum Time {
     MILLI {

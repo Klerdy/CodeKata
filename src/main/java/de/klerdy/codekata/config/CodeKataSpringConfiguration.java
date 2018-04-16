@@ -17,9 +17,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 
+/**
+ * The Spring-Configuration.
+ */
 @Configuration
 public class CodeKataSpringConfiguration {
 
+    /**
+     * Bean-names.
+     */
     public static final String WORDSEARCHER_READABLE = "wordSearcherReadable";
     public static final String WORDSEARCHER_SPEED = "speedWordSearcher";
     public static final String OBJECTIVE_READABLE = "readable";

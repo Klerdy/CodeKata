@@ -33,11 +33,11 @@ public class WordSearcherSpeed implements WordSearcher {
      * contains the matched word (word + concatenated smaller words) if we find the word and at
      * least one concatenated combination in the hash map.
      * 
-     * @param allKnownWords the hash map with all words that can match.
+     * @param wordsInHashMap the hash map with all words that can match.
      * @param word a specific word of length {@link de.klerdy.codekata.constants.CodeKataConstants#WORD_LENGTH}.
      * @return a {@link Optional} object.
      */
-    private Optional<String> getRightWordPairs(final Map<String, Short> allKnownWords,
+    private Optional<String> getRightWordPairs(final Map<String, Short> wordsInHashMap,
             final String word) {
         final char[] wordToChars = word.toCharArray();
         final StringBuilder left = new StringBuilder();
@@ -50,8 +50,8 @@ public class WordSearcherSpeed implements WordSearcher {
             final char currentChar = wordToChars[i];
             left.append(currentChar);
             right.deleteCharAt(0);
-            isRight = allKnownWords.containsKey(left.toString())
-                    && allKnownWords.containsKey(right.toString());
+            isRight = wordsInHashMap.containsKey(left.toString())
+                    && wordsInHashMap.containsKey(right.toString());
         }
 
         if (isRight) {
