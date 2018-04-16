@@ -1,4 +1,4 @@
-package de.idealo.codekata.readable;
+package de.klerdy.codekata.readable;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,7 +16,7 @@ public interface WordSearcher {
      * @param length the length of words we are looking for
      * @return a collection with words of the given length
      */
-    <T> List<T> getCollectionWithSpecificWordLength(Collection<T> collection, int length);
+    List<String> getCollectionWithSpecificWordLength(Collection<String> collection, int length);
 
     /**
      * Creates a list of lists, each list containing words of a fixed length.
@@ -24,7 +24,15 @@ public interface WordSearcher {
      * @param length the count of collections that we want to extract.
      * @return a collection with collections
      */
-    ArrayList<ArrayList<String>> getCollectionWithWordsGroupedByLength(Collection<String> collection, int length);
+    ArrayList<ArrayList<String>> getListsOfWordsGroupedByLength(Collection<String> collection, int length);
+
+    /**
+     * Tries to find a word in a collection.
+     * @param collection the collection.
+     * @param word the word we are looking for.
+     * @return <code>true</code> if the collection contains the word, otherwise <code>false</code>.
+     */
+    boolean isWordInList(Collection<String> collection, String word);
 
 
 

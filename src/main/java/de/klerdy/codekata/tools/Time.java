@@ -1,4 +1,4 @@
-package de.idealo.codekata.tools;
+package de.klerdy.codekata.tools;
 
 import java.time.Duration;
 
